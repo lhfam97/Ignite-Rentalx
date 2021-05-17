@@ -1,8 +1,12 @@
 import express from "express";
-import { router } from "./routes";
 import swaggerUI from "swagger-ui-express";
 
+import "./database";
+import "./shared/container";
+
+import { router } from "./routes";
 import swaggerFile from "./swagger.json";
+
 // import cors from "cors";
 
 const app = express();
