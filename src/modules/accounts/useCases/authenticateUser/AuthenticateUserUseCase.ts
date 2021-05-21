@@ -39,6 +39,7 @@ class AuthenticateUserUseCase {
     }
 
     //Gerar json webtoken
+    console.log(user);
     const token = sign({}, "06da7747c389ed2fa550549f1ea32b96", {
       subject: user.id,
       expiresIn: "1d",
