@@ -3,6 +3,7 @@ import { ensureAuthenticated } from "../middlewares/ensureAuthenticated";
 
 import { CreateSpecificationController } from "@modules/cars/useCases/createSpecificiation/CreateSpecificationController";
 import { ListSpecificationsController } from "@modules/cars/useCases/listSpecifications/ListSpecificationsController";
+import { ensureAdmin } from "../middlewares/ensureAdmin";
 
 const specificationsRoutes = Router();
 
@@ -12,6 +13,7 @@ const listSpecificationsController = new ListSpecificationsController();
 specificationsRoutes.post(
   "/",
   ensureAuthenticated,
+  ensureAdmin,
   createSpecificationController.handle
 );
 
