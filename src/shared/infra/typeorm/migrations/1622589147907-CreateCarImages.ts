@@ -16,7 +16,7 @@ export class CreateCarImages1622589147907 implements MigrationInterface {
         ],
         foreignKeys: [
           {
-            name: "FK_CarSpecification",
+            name: "FK_CarImage",
             referencedTableName: "cars",
             referencedColumnNames: ["id"],
             columnNames: ["car_id"],
